@@ -32,12 +32,16 @@ With encryption you get a less obvious version:
 
 #### Usage:
 	// Init
-    SecurePreferences preferences = new SecurePreferences(context, "my-preferences", "SometopSecretKey1235", true);
-    // Put (all puts are automatically committed)
-    preferences.put("userId", "User1234");
-    // Get
+    SecurePreferences preferences = new SecurePreferences(context, "my-preferences",
+    "SometopSecretKey1235", "randomSalt", true);
+    // Put a String value(all puts are automatically committed)
+    preferences.putString("userId", "User1234");
+    // Get a String value
     String user = preferences.getString("userId");
+    // Put a boolean value
+    preferences.putBoolean("boolKey", true);
+    // Get a boolean value
+    String user = preferences.getBoolean("booleanKey", true/false);
     
 #### Requirements and limitation:
-Android API Level 8 (for Base64 support).
-Only strings put/gets are supported for now, this should cover most usages.
+Android API Level 10 (for SecureRandom).

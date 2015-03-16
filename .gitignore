@@ -1,0 +1,30 @@
+# IntelliJ
+*.iml
+.idea/
+
+# Build Output
+target/
+bin/
+classes/
+dagger-proguard-keepnames.cfg
+
+# Eclipse
+.project
+.settings
+.classpath
+
+# Android
+gen/
+gen-external-apklibs/
+local.properties
+proguard_logs/
+
+# MaxOSX Crap
+.DS_Store
+
+# Robolectric
+tmp
+
+# Maven
+*.versionsBackup
+dependency-reduced-pom.xml
